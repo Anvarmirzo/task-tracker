@@ -14,4 +14,8 @@ export class TaskService {
   getTasks() {
     return this.http.get<Task[]>(this.apiUrl)
   }
+
+  deleteTask(task: Task) {
+    return this.http.delete<Task>(`${this.apiUrl}/${task.id}`)
+  }
 }

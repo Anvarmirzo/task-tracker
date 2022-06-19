@@ -8,8 +8,6 @@ import {TaskService} from '../../services/task.service';
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
-
-
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
 
@@ -19,6 +17,13 @@ export class TasksComponent implements OnInit {
   ngOnInit() {
     this.taskService.getTasks().subscribe({
       next: (tasks) => this.tasks = tasks,
+      error: (err) => console.log(err)
+    });
+  }
+
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task).subscribe({
+      next: () => this.tasks = this.tasks.filter(t => t.id !== task.id),
       error: (err) => console.log(err)
     });
   }
