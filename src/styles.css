@@ -11,6 +11,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   max-width: 500px;
   margin: 30px auto;
