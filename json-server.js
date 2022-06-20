@@ -6,5 +6,4 @@ const port = 13000;
 
 server.use(middlewares);
 server.use(router);
-
-server.listen(port);
+server.listen(port, () => console.log(`Json-server is listening on port ${port}...`));
