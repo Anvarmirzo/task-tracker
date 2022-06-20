@@ -1,6 +1,12 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Task} from '../Task';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +23,9 @@ export class TaskService {
 
   deleteTask(task: Task) {
     return this.http.delete<Task>(`${this.apiUrl}/${task.id}`)
+  }
+
+  updateTaskReminder(task: Task) {
+    return this.http.put<Task>(`${this.apiUrl}/${task.id}`, task, httpOptions)
   }
 }
