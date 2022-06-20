@@ -21,7 +21,7 @@
     {
       "text": "Work",
       "day": "May 9th at 8",
-      "reminder": true,
+      "reminder": false,
       "id": 5
     },
     {
