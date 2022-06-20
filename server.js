@@ -5,4 +5,5 @@ app.use(express.static(__dirname + '/dist/task-tracker'));
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname + '/dist/task-tracker/index.html'));
 });
-app.listen(process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Task Tracker is listening on port ${port}...`));
