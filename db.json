@@ -21,8 +21,14 @@
     {
       "text": "Work",
       "day": "May 9th at 8",
-      "reminder": false,
+      "reminder": true,
       "id": 5
+    },
+    {
+      "text": "asdasd",
+      "day": "asdasdasd",
+      "reminder": false,
+      "id": 6
     }
   ]
 }
