@@ -27,7 +27,7 @@
     {
       "text": "asdasd",
       "day": "asdasdasd",
-      "reminder": false,
+      "reminder": true,
       "id": 6
     }
   ]
